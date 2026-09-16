@@ -537,6 +537,12 @@ Version and platform still travel when you opt out — the server needs them to 
 
 Sign-in is browser-based OAuth against your KlaatAI account — there are no API keys to generate or paste. `klaatcode login` opens a browser tab, you authenticate with KlaatAI, and a short-lived JWT plus refresh token are stored locally in `~/.klaatai/credentials.json` (mode `0600`, never synced or logged). The CLI silently refreshes the token in the background and recovers automatically from expiry mid-session; `klaatcode logout` clears everything. Every chat request goes straight to Klaatu over HTTPS with that token — the server enforces your plan's quota and never proxies your credentials anywhere else.
 
+## Guides
+
+Step-by-step integration guides live in [`docs/guides`](docs/guides/README.md).
+
+- [Configure Klaatu in OpenCode](docs/guides/configure-klaatu-in-opencode.md)
+
 ## Contributing
 
 We welcome contributions — see [CONTRIBUTING.md](CONTRIBUTING.md) for dev setup, the PR process, and what `bun run bench:selfcheck` needs to pass before a PR is reviewed.
